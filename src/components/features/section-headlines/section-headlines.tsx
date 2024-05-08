@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '2.25rem',
     fontWeight: 600,
     lineHeight: 1.083,
+    border: '10px solid purple',
     color: "red",
   },
   subline: {
