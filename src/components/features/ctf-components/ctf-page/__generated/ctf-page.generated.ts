@@ -4,6 +4,8 @@ import { AssetFieldsFragment } from '../../ctf-asset/__generated/ctf-asset.gener
 import { AssetFieldsFragmentDoc } from '../../ctf-asset/__generated/ctf-asset.generated';
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 import { customFetcher } from '@src/lib/fetchConfig';
+export type PageTopSectionFields_ComponentColorfulHeader_Fragment = { __typename: 'ComponentColorfulHeader' };
+
 export type PageTopSectionFields_ComponentCta_Fragment = { __typename: 'ComponentCta' };
 
 export type PageTopSectionFields_ComponentDuplex_Fragment = { __typename: 'ComponentDuplex' };
@@ -16,7 +18,7 @@ export type PageTopSectionFields_ComponentQuote_Fragment = { __typename: 'Compon
 
 export type PageTopSectionFields_ComponentTextBlock_Fragment = { __typename: 'ComponentTextBlock' };
 
-export type PageTopSectionFieldsFragment = PageTopSectionFields_ComponentCta_Fragment | PageTopSectionFields_ComponentDuplex_Fragment | PageTopSectionFields_ComponentHeroBanner_Fragment | PageTopSectionFields_ComponentInfoBlock_Fragment | PageTopSectionFields_ComponentQuote_Fragment | PageTopSectionFields_ComponentTextBlock_Fragment;
+export type PageTopSectionFieldsFragment = PageTopSectionFields_ComponentColorfulHeader_Fragment | PageTopSectionFields_ComponentCta_Fragment | PageTopSectionFields_ComponentDuplex_Fragment | PageTopSectionFields_ComponentHeroBanner_Fragment | PageTopSectionFields_ComponentInfoBlock_Fragment | PageTopSectionFields_ComponentQuote_Fragment | PageTopSectionFields_ComponentTextBlock_Fragment;
 
 export type PageContentFields_ComponentProductTable_Fragment = { __typename: 'ComponentProductTable' };
 
@@ -38,12 +40,17 @@ export type PageExtraSectionItemFields_ComponentQuote_Fragment = { __typename: '
 
 export type PageExtraSectionItemFields_ComponentTextBlock_Fragment = { __typename: 'ComponentTextBlock' };
 
-export type PageExtraSectionItemFieldsFragment = PageExtraSectionItemFields_ComponentCta_Fragment | PageExtraSectionItemFields_ComponentDuplex_Fragment | PageExtraSectionItemFields_ComponentHeroBanner_Fragment | PageExtraSectionItemFields_ComponentInfoBlock_Fragment | PageExtraSectionItemFields_ComponentQuote_Fragment | PageExtraSectionItemFields_ComponentTextBlock_Fragment;
+export type PageExtraSectionItemFields_WistiaVideo_Fragment = { __typename: 'WistiaVideo' };
+
+export type PageExtraSectionItemFieldsFragment = PageExtraSectionItemFields_ComponentCta_Fragment | PageExtraSectionItemFields_ComponentDuplex_Fragment | PageExtraSectionItemFields_ComponentHeroBanner_Fragment | PageExtraSectionItemFields_ComponentInfoBlock_Fragment | PageExtraSectionItemFields_ComponentQuote_Fragment | PageExtraSectionItemFields_ComponentTextBlock_Fragment | PageExtraSectionItemFields_WistiaVideo_Fragment;
 
 export type CtfPageFieldsFragment = { __typename: 'Page', pageName?: string | null, slug?: string | null, internalName?: string | null, sys: { __typename?: 'Sys', id: string }, seo?: { __typename?: 'Seo', title?: string | null, description?: string | null, noIndex?: boolean | null, noFollow?: boolean | null, image?: (
       { __typename?: 'Asset' }
       & AssetFieldsFragment
     ) | null } | null, topSectionCollection?: { __typename?: 'PageTopSectionCollection', items: Array<(
+      { __typename: 'ComponentColorfulHeader', sys: { __typename?: 'Sys', id: string } }
+      & PageTopSectionFields_ComponentColorfulHeader_Fragment
+    ) | (
       { __typename: 'ComponentCta', sys: { __typename?: 'Sys', id: string } }
       & PageTopSectionFields_ComponentCta_Fragment
     ) | (
@@ -88,6 +95,9 @@ export type CtfPageFieldsFragment = { __typename: 'Page', pageName?: string | nu
     ) | (
       { __typename: 'ComponentTextBlock', sys: { __typename?: 'Sys', id: string } }
       & PageExtraSectionItemFields_ComponentTextBlock_Fragment
+    ) | (
+      { __typename: 'WistiaVideo', sys: { __typename?: 'Sys', id: string } }
+      & PageExtraSectionItemFields_WistiaVideo_Fragment
     ) | null> } | null };
 
 export type CtfPageQueryVariables = Types.Exact<{

@@ -7,7 +7,7 @@ import { PageError } from '@src/components/features/errors/page-error';
 import { getServerSideTranslations } from '@src/lib/get-serverside-translations';
 
 const ErrorPage404 = () => {
-  return <PageError error={{ code: 404 }} />;
+  return <div> Test: <PageError error={{ code: 404 }} /></div>;
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {

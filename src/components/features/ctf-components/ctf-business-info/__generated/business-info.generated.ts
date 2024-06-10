@@ -1,7 +1,7 @@
 import * as Types from '../../../../../lib/__generated/graphql.types';
 
 import { AssetFieldsFragment } from '../../ctf-asset/__generated/ctf-asset.generated';
-import { ComponentReferenceFields_ComponentCta_Fragment, ComponentReferenceFields_ComponentDuplex_Fragment, ComponentReferenceFields_ComponentHeroBanner_Fragment, ComponentReferenceFields_ComponentInfoBlock_Fragment, ComponentReferenceFields_ComponentProductTable_Fragment, ComponentReferenceFields_ComponentQuote_Fragment, ComponentReferenceFields_ComponentTextBlock_Fragment, ComponentReferenceFields_FooterMenu_Fragment, ComponentReferenceFields_MenuGroup_Fragment, ComponentReferenceFields_NavigationMenu_Fragment, ComponentReferenceFields_Page_Fragment, ComponentReferenceFields_Seo_Fragment, ComponentReferenceFields_TopicBusinessInfo_Fragment, ComponentReferenceFields_TopicPerson_Fragment, ComponentReferenceFields_TopicProduct_Fragment, ComponentReferenceFields_TopicProductFeature_Fragment } from '../../../../../lib/shared-fragments/__generated/ctf-componentMap.generated';
+import { ComponentReferenceFields_ColorfulHeader_Fragment, ComponentReferenceFields_ComponentColorfulHeader_Fragment, ComponentReferenceFields_ComponentCta_Fragment, ComponentReferenceFields_ComponentDuplex_Fragment, ComponentReferenceFields_ComponentHeroBanner_Fragment, ComponentReferenceFields_ComponentInfoBlock_Fragment, ComponentReferenceFields_ComponentProductTable_Fragment, ComponentReferenceFields_ComponentQuote_Fragment, ComponentReferenceFields_ComponentTextBlock_Fragment, ComponentReferenceFields_FeaturePage_Fragment, ComponentReferenceFields_FooterMenu_Fragment, ComponentReferenceFields_MenuGroup_Fragment, ComponentReferenceFields_MyContentType_Fragment, ComponentReferenceFields_NavigationMenu_Fragment, ComponentReferenceFields_Page_Fragment, ComponentReferenceFields_Seo_Fragment, ComponentReferenceFields_TopContainer_Fragment, ComponentReferenceFields_TopicBusinessInfo_Fragment, ComponentReferenceFields_TopicPerson_Fragment, ComponentReferenceFields_TopicProduct_Fragment, ComponentReferenceFields_TopicProductFeature_Fragment, ComponentReferenceFields_WistiaVideo_Fragment } from '../../../../../lib/shared-fragments/__generated/ctf-componentMap.generated';
 import { AssetFieldsFragmentDoc } from '../../ctf-asset/__generated/ctf-asset.generated';
 import { ComponentReferenceFieldsFragmentDoc } from '../../../../../lib/shared-fragments/__generated/ctf-componentMap.generated';
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
@@ -10,6 +10,12 @@ export type BusinessInfoFieldsFragment = { __typename: 'TopicBusinessInfo', name
     { __typename?: 'Asset' }
     & AssetFieldsFragment
   ) | null, body?: { __typename?: 'TopicBusinessInfoBody', json: any, links: { __typename?: 'TopicBusinessInfoBodyLinks', entries: { __typename?: 'TopicBusinessInfoBodyEntries', block: Array<(
+          { __typename?: 'ColorfulHeader' }
+          & ComponentReferenceFields_ColorfulHeader_Fragment
+        ) | (
+          { __typename?: 'ComponentColorfulHeader' }
+          & ComponentReferenceFields_ComponentColorfulHeader_Fragment
+        ) | (
           { __typename?: 'ComponentCta' }
           & ComponentReferenceFields_ComponentCta_Fragment
         ) | (
@@ -31,11 +37,17 @@ export type BusinessInfoFieldsFragment = { __typename: 'TopicBusinessInfo', name
           { __typename?: 'ComponentTextBlock' }
           & ComponentReferenceFields_ComponentTextBlock_Fragment
         ) | (
+          { __typename?: 'FeaturePage' }
+          & ComponentReferenceFields_FeaturePage_Fragment
+        ) | (
           { __typename?: 'FooterMenu' }
           & ComponentReferenceFields_FooterMenu_Fragment
         ) | (
           { __typename?: 'MenuGroup' }
           & ComponentReferenceFields_MenuGroup_Fragment
+        ) | (
+          { __typename?: 'MyContentType' }
+          & ComponentReferenceFields_MyContentType_Fragment
         ) | (
           { __typename?: 'NavigationMenu' }
           & ComponentReferenceFields_NavigationMenu_Fragment
@@ -45,6 +57,9 @@ export type BusinessInfoFieldsFragment = { __typename: 'TopicBusinessInfo', name
         ) | (
           { __typename?: 'Seo' }
           & ComponentReferenceFields_Seo_Fragment
+        ) | (
+          { __typename?: 'TopContainer' }
+          & ComponentReferenceFields_TopContainer_Fragment
         ) | (
           { __typename?: 'TopicBusinessInfo' }
           & ComponentReferenceFields_TopicBusinessInfo_Fragment
@@ -57,6 +72,9 @@ export type BusinessInfoFieldsFragment = { __typename: 'TopicBusinessInfo', name
         ) | (
           { __typename?: 'TopicProductFeature' }
           & ComponentReferenceFields_TopicProductFeature_Fragment
+        ) | (
+          { __typename?: 'WistiaVideo' }
+          & ComponentReferenceFields_WistiaVideo_Fragment
         ) | null> }, assets: { __typename?: 'TopicBusinessInfoBodyAssets', block: Array<(
           { __typename?: 'Asset' }
           & AssetFieldsFragment
