@@ -20,6 +20,9 @@ export const componentMap = {
   ComponentCta: dynamic(() =>
     import('@src/components/features/ctf-components/ctf-cta/ctf-cta').then(module => module.CtfCta),
   ),
+  ComponentColorfulHeader: dynamic(() =>
+    import('@src/components/features/ctf-components/ctf-colorful-header/ctf-colorful-header').then(module => module.CtfColorfulHeader),
+  ),
   ComponentDuplex: dynamic(() =>
     import('@src/components/features/ctf-components/ctf-duplex/ctf-duplex').then(module => module.CtfDuplex),
   ),

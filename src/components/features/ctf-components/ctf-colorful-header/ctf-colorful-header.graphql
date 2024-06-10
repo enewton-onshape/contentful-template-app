@@ -1,0 +1,14 @@
+fragment ColorfulHeaderFields on ComponentColorfulHeader {
+  __typename
+  sys {
+    id
+  }
+  text
+  color
+}
+
+query CtfColorfulHeader($id: String!, $locale: String, $preview: Boolean) {
+  componentColorfulHeader(id: $id, locale: $locale, preview: $preview) {
+    ...ColorfulHeaderFields
+  }
+}

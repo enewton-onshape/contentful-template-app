@@ -5,10 +5,6 @@ import LinkedIn from '@mui/icons-material/LinkedIn';
 import Twitter from '@mui/icons-material/Twitter';
 import { Theme, Container, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { useTranslation } from 'next-i18next';
-
-import { FooterFieldsFragment } from './__generated/ctf-footer.generated';
-
 import {
   getLinkDisplayText,
   getLinkHrefPrefix,
@@ -18,6 +14,9 @@ import { Link } from '@src/components/shared/link';
 import { useContentfulContext } from '@src/contentful-context';
 import Logo from '@src/icons/logo-tagline.svg';
 import { CONTAINER_WIDTH } from '@src/theme';
+import { useTranslation } from 'next-i18next';
+
+import { FooterFieldsFragment } from './__generated/ctf-footer.generated';
 
 const useStyles = makeStyles((theme: Theme) => ({
   footerContainer: {
@@ -224,7 +223,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const CtfFooter = (props: FooterFieldsFragment) => {
   const footerContent = props.items[0];
-
+  console.log({footerProps: props})
   const { t } = useTranslation();
   const { locale } = useContentfulContext();
   const inspectorMode = useContentfulInspectorMode();
