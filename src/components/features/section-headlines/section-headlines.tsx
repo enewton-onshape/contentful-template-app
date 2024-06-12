@@ -1,10 +1,10 @@
 import type { InspectorModeTags } from '@contentful/live-preview/dist/inspectorMode/types';
 import { Theme, Typography, TypographyProps } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { Markdown } from '@src/components/features/markdown';
 import clsx from 'clsx';
 import React from 'react';
 
-import { Markdown } from '@src/components/features/markdown';
 
 const useStyles = makeStyles((theme: Theme) => ({
   containerCentered: {
@@ -61,7 +61,7 @@ export const SectionHeadlines = (props: SectionHeadlinesPropsInterface) => {
   const classes = useStyles();
   const computedHeadlineProps: TypographyProps & { component?: string } = {
     variant: 'h1',
-    component: 'h2',
+    component: 'h2' as any,
     ...headlineProps,
     ...headlineLivePreviewProps,
     className: clsx(headlineProps.className, classes.headline),
