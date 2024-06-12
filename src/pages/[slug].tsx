@@ -1,7 +1,5 @@
-import { dehydrate, QueryClient } from '@tanstack/react-query';
-import { NextPage, NextPageContext } from 'next';
-import { useRouter } from 'next/router';
 
+import CtfFeaturePage from '@src/components/features/ctf-components/ctf-feature-page/ctf-feature-page';
 import { useCtfFooterQuery } from '@src/components/features/ctf-components/ctf-footer/__generated/ctf-footer.generated';
 import { useCtfNavigationQuery } from '@src/components/features/ctf-components/ctf-navigation/__generated/ctf-navigation.generated';
 import { useCtfPageQuery } from '@src/components/features/ctf-components/ctf-page/__generated/ctf-page.generated';
@@ -10,10 +8,17 @@ import { ComponentReferenceFieldsFragment } from '@src/lib/__generated/graphql.t
 import { getServerSideTranslations } from '@src/lib/get-serverside-translations';
 import { prefetchMap, PrefetchMappingTypeFetcher } from '@src/lib/prefetch-mappings';
 import { prefetchPromiseArr } from '@src/lib/prefetch-promise-array';
+import { dehydrate, QueryClient } from '@tanstack/react-query';
+import { NextPage, NextPageContext } from 'next';
+import { useRouter } from 'next/router';
 
 const SlugPage: NextPage = () => {
   const router = useRouter();
   const slug = (router?.query.slug as string) || '';
+
+  if (slug.startsWith('feature')) {
+    return <CtfFeaturePage slug={slug} />
+  }
 
   return <CtfPageGgl slug={slug} />;
 };
