@@ -1,5 +1,6 @@
 
 import CtfFeaturePage from '@src/components/features/ctf-components/ctf-feature-page/ctf-feature-page';
+import CtfFeaturePageGgl from '@src/components/features/ctf-components/ctf-feature-page/ctf-feature-page-gql';
 import { useCtfFooterQuery } from '@src/components/features/ctf-components/ctf-footer/__generated/ctf-footer.generated';
 import { useCtfNavigationQuery } from '@src/components/features/ctf-components/ctf-navigation/__generated/ctf-navigation.generated';
 import { useCtfPageQuery } from '@src/components/features/ctf-components/ctf-page/__generated/ctf-page.generated';
@@ -17,7 +18,7 @@ const SlugPage: NextPage = () => {
   const slug = (router?.query.slug as string) || '';
 
   if (slug.startsWith('feature')) {
-    return <CtfFeaturePage slug={slug} />
+    return <CtfFeaturePageGgl slug={slug} />
   }
 
   return <CtfPageGgl slug={slug} />;
