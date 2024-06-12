@@ -4,6 +4,8 @@ import { PageContainer } from '@src/components/templates/page-container';
 import LayoutContext, { defaultLayout } from '@src/layout-context';
 import React from 'react';
 
+import { CtfFeaturePageFieldsFragment } from './__generated/ctf-feature-page.generated';
+
 const CtfFeaturePage = (props: CtfFeaturePageFieldsFragment) => {
   const topSection =
     props.topSectionCollection && props.topSectionCollection.items.filter(it => !!it);
